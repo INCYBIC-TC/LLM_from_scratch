@@ -1,0 +1,13 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Datasets
+Dataset/
+*.csv
+*.json
+*.xlsx
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
