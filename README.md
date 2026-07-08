@@ -23,10 +23,10 @@
 - [Learning Roadmap](#-learning-roadmap)
 - [Repository Structure](#-repository-structure)
 - [Getting Started](#-getting-started)
-- [🤖 Machine Learning Concepts](#-machine-learning-concepts)
-- [🧬 Deep Learning Concepts](#-deep-learning-concepts)
-- [🗣️ Large Language Model Concepts](#️-large-language-model-concepts)
-- [Transformer Architecture at a Glance](#-transformer-architecture-at-a-glance)
+- [Machine Learning Concepts](#-machine-learning-concepts)
+- [Deep Learning Concepts](#-deep-learning-concepts)
+- [Large Language Model Concepts](#️-large-language-model-concepts)
+- [Transformer Architecture](#-transformer-architecture-at-a-glance)
 - [How to Use](#-how-to-use)
 - [Learning Objectives](#-learning-objectives)
 - [Contributing](#-contributing)
@@ -81,28 +81,11 @@ LLM_from_scratch/
 └── 📄 README.md             # This file
 ```
 
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 🤖 `machine learning/`
-Supervised & unsupervised learning, feature engineering, classical algorithms, ensembles, and evaluation metrics.
-
-</td>
-<td width="33%" valign="top">
-
-### 🧬 `Deep learning/`
-Neural networks, CNNs, RNNs, autoencoders, GANs, transformers, and modern training techniques.
-
-</td>
-<td width="33%" valign="top">
-
-### 📄 `pdf/`
-Reference papers, curated documentation, cheat sheets, and supplementary learning materials.
-
-</td>
-</tr>
-</table>
+| Section | Description |
+|---------|-------------|
+| **🤖 `machine learning/`** | Supervised & unsupervised learning, feature engineering, classical algorithms, ensembles, and evaluation metrics. |
+| **🧬 `Deep learning/`** | Neural networks, CNNs, RNNs, autoencoders, GANs, transformers, and modern training techniques. |
+| **📄 `pdf/`** | Reference papers, curated documentation, cheat sheets, and supplementary learning materials. |
 
 ---
 
@@ -120,44 +103,40 @@ Reference papers, curated documentation, cheat sheets, and supplementary learnin
 
 ### ⚙️ Installation
 
-# Create venv
-python3.10 -m venv venv        # Linux
-# or
-py -3.10 -m venv venv          # Windows
+**1. Clone the repository**
+```bash
+git clone https://github.com/INCYBIC-TC/LLM_from_scratch.git
+cd LLM_from_scratch
+```
 
-# Activate
-source venv/bin/activate       # Linux
-# or
-venv\Scripts\activate          # Windows
+**2. Create an environment (recommended)**
+```bash
+conda create -n llm-from-scratch python=3.11
+conda activate llm-from-scratch
+```
 
-# Upgrade pip
-python -m pip install --upgrade pip
-
-# Install dependencies
+**3. Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-# After adding new packages
-pip freeze > requirements.txt
+**4. Launch Jupyter Notebook**
+```bash
+jupyter notebook
 ```
 
 ---
 
 ## 🤖 Machine Learning Concepts
 
-<details open>
-<summary><b>📐 1. Foundations</b></summary>
-<br>
+### 📐 1. Foundations
 
 - Linear algebra essentials (vectors, matrices, eigenvalues)
 - Probability & statistics (distributions, Bayes' theorem, MLE)
 - Calculus for optimization (gradients, partial derivatives)
 - Bias-variance tradeoff
 
-</details>
-
-<details open>
-<summary><b>📈 2. Supervised Learning</b></summary>
-<br>
+### 📈 2. Supervised Learning
 
 | Category | Algorithms |
 |---|---|
@@ -166,33 +145,21 @@ pip freeze > requirements.txt
 | Tree-Based | Decision Trees, Random Forest |
 | Boosting | AdaBoost, Gradient Boosting, XGBoost, LightGBM, CatBoost |
 
-</details>
-
-<details open>
-<summary><b>🔍 3. Unsupervised Learning</b></summary>
-<br>
+### 🔍 3. Unsupervised Learning
 
 - Clustering: K-Means, Hierarchical Clustering, DBSCAN
 - Dimensionality Reduction: PCA, t-SNE, UMAP
 - Anomaly & Outlier Detection
 - Association Rule Mining (Apriori, FP-Growth)
 
-</details>
-
-<details open>
-<summary><b>🛠️ 4. Feature Engineering & Model Prep</b></summary>
-<br>
+### 🛠️ 4. Feature Engineering & Model Preparation
 
 - Scaling & normalization (Standard, MinMax, Robust)
 - Encoding categorical variables (One-Hot, Label, Target)
 - Feature selection (filter, wrapper, embedded methods)
 - Handling missing data & imbalanced datasets (SMOTE)
 
-</details>
-
-<details open>
-<summary><b>📊 5. Model Evaluation & Optimization</b></summary>
-<br>
+### 📊 5. Model Evaluation & Optimization
 
 - Cross-validation (k-fold, stratified)
 - Confusion matrix, Precision, Recall, F1-score
@@ -200,15 +167,11 @@ pip freeze > requirements.txt
 - Hyperparameter tuning (Grid Search, Random Search, Bayesian Optimization)
 - Regularization (L1/L2)
 
-</details>
-
 ---
 
 ## 🧬 Deep Learning Concepts
 
-<details open>
-<summary><b>🧩 1. Neural Network Fundamentals</b></summary>
-<br>
+### 🧩 1. Neural Network Fundamentals
 
 - Perceptron & Multi-Layer Perceptrons (MLPs)
 - Activation functions (Sigmoid, Tanh, ReLU, GELU, Swish)
@@ -216,11 +179,7 @@ pip freeze > requirements.txt
 - Loss functions (MSE, Cross-Entropy, Huber)
 - Weight initialization (Xavier, He)
 
-</details>
-
-<details open>
-<summary><b>⚙️ 2. Optimization & Training</b></summary>
-<br>
+### ⚙️ 2. Optimization & Training
 
 - Gradient Descent variants: SGD, Momentum, RMSProp, Adam, AdamW
 - Learning rate scheduling & warmup
@@ -228,22 +187,14 @@ pip freeze > requirements.txt
 - Dropout & other regularization techniques
 - Vanishing / Exploding gradients
 
-</details>
-
-<details open>
-<summary><b>🖼️ 3. Convolutional Neural Networks (CNNs)</b></summary>
-<br>
+### 🖼️ 3. Convolutional Neural Networks (CNNs)
 
 - Convolution, padding, stride & pooling operations
 - Classic architectures: LeNet, AlexNet, VGG, ResNet, Inception
 - Transfer learning & fine-tuning pretrained CNNs
 - Applications: image classification, object detection, segmentation
 
-</details>
-
-<details open>
-<summary><b>🔁 4. Recurrent Neural Networks (RNNs)</b></summary>
-<br>
+### 🔁 4. Recurrent Neural Networks (RNNs)
 
 - Vanilla RNNs & the vanishing gradient problem
 - LSTM (Long Short-Term Memory)
@@ -251,22 +202,14 @@ pip freeze > requirements.txt
 - Sequence-to-Sequence (Seq2Seq) models
 - Bidirectional RNNs
 
-</details>
-
-<details open>
-<summary><b>🎨 5. Generative Models</b></summary>
-<br>
+### 🎨 5. Generative Models
 
 - Autoencoders & Denoising Autoencoders
 - Variational Autoencoders (VAEs)
 - Generative Adversarial Networks (GANs)
 - Diffusion models (intro-level concepts)
 
-</details>
-
-<details open>
-<summary><b>🔀 6. Attention & Transformers</b></summary>
-<br>
+### 🔀 6. Attention & Transformers
 
 - The attention mechanism (Bahdanau, Luong)
 - Self-attention from first principles
@@ -274,25 +217,17 @@ pip freeze > requirements.txt
 - Positional encoding (sinusoidal, learned)
 - Encoder-decoder Transformer architecture
 
-</details>
-
 ---
 
 ## 🗣️ Large Language Model Concepts
 
-<details open>
-<summary><b>🔡 1. Tokenization & Embeddings</b></summary>
-<br>
+### 🔡 1. Tokenization & Embeddings
 
 - Byte-Pair Encoding (BPE), WordPiece, SentencePiece
 - Word embeddings: Word2Vec, GloVe
 - Contextual embeddings & subword tokenization tradeoffs
 
-</details>
-
-<details open>
-<summary><b>🏗️ 2. Model Architecture</b></summary>
-<br>
+### 🏗️ 2. Model Architecture
 
 - Decoder-only Transformer (GPT-style) architecture
 - Scaled dot-product attention & causal masking
@@ -300,33 +235,21 @@ pip freeze > requirements.txt
 - Rotary Positional Embeddings (RoPE) & ALiBi
 - Mixture of Experts (MoE) basics
 
-</details>
-
-<details open>
-<summary><b>🎓 3. Pretraining</b></summary>
-<br>
+### 🎓 3. Pretraining
 
 - Causal Language Modeling (next-token prediction)
 - Masked Language Modeling (BERT-style)
 - Data preparation, tokenization pipelines & scaling laws
 - Loss curves, perplexity & evaluation
 
-</details>
-
-<details open>
-<summary><b>🎯 4. Fine-Tuning & Efficient Adaptation</b></summary>
-<br>
+### 🎯 4. Fine-Tuning & Efficient Adaptation
 
 - Full fine-tuning vs. parameter-efficient fine-tuning (PEFT)
 - LoRA & QLoRA
 - Instruction tuning / Supervised Fine-Tuning (SFT)
 - Prefix tuning & adapters
 
-</details>
-
-<details open>
-<summary><b>🤝 5. Alignment & Post-Training</b></summary>
-<br>
+### 🤝 5. Alignment & Post-Training
 
 - Reward modeling
 - RLHF (Reinforcement Learning from Human Feedback)
@@ -334,19 +257,13 @@ pip freeze > requirements.txt
 - DPO (Direct Preference Optimization)
 - GRPO (Group-Relative Policy Optimization)
 
-</details>
-
-<details open>
-<summary><b>⚡ 6. Inference & Deployment</b></summary>
-<br>
+### ⚡ 6. Inference & Deployment
 
 - Quantization (INT8 / INT4, GPTQ, AWQ)
 - Flash Attention & memory-efficient inference
 - Speculative decoding
 - Retrieval-Augmented Generation (RAG)
 - Prompt engineering & AI agents
-
-</details>
 
 ---
 
