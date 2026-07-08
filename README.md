@@ -120,26 +120,24 @@ Reference papers, curated documentation, cheat sheets, and supplementary learnin
 
 ### ⚙️ Installation
 
-**1. Clone the repository**
-```bash
-git clone https://github.com/INCYBIC-TC/LLM_from_scratch.git
-cd LLM_from_scratch
-```
+# Create venv
+python3.10 -m venv venv        # Linux
+# or
+py -3.10 -m venv venv          # Windows
 
-**2. Create an environment (recommended)**
-```bash
-conda create -n llm-from-scratch python=3.11
-conda activate llm-from-scratch
-```
+# Activate
+source venv/bin/activate       # Linux
+# or
+venv\Scripts\activate          # Windows
 
-**3. Install dependencies**
-```bash
+# Upgrade pip
+python -m pip install --upgrade pip
+
+# Install dependencies
 pip install -r requirements.txt
-```
 
-**4. Launch Jupyter Notebook**
-```bash
-jupyter notebook
+# After adding new packages
+pip freeze > requirements.txt
 ```
 
 ---
